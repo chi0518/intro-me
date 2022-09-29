@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'MaruBuri-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  box-sizing: border-box;
+  padding: 0 5rem ;
+  background-color: rgb(99, 99, 99);
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+}
+
+header nav ul li {
+  padding: 0 20px;
+}
+
+header nav ul li a {
+  height: 80px;
+  line-height: 80px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+  transition: all 1s;
+}
+
+header nav ul li a:hover {
+  cursor: pointer;
+  background-color: darkgrey;
+  letter-spacing: 4px;
+  transition: all 1s;
+}
+
+#profile {
+  /* height: 100vh; */
+  padding: 5rem;
+}
+
+#profile > article h1 {
+  margin-bottom: 20px;
+}
+
+#profile > article div {
+  width: auto;
+  height: 500px;
+  overflow: hidden;
+}
+
+#profile img {
+  height: 500px;
+  object-fit:cover;  
+  transform: scale(1.0);
+  transition: all 1s;
+}
+
+#profile img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 1s;
+}
+
+#detail {
+  /* height: 100vh; */
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 13rem;
+  place-items: start;
+  place-content: space-between center;
+}
+
+#detail > section {
+  width: 100%;
+  box-sizing: border-box;
+  /* padding: 2rem; */
+}
+
+#detail > section h2 {
+  margin-bottom: 1rem;
+}
+
+#detail > section li {
+  line-height: 30px;
+  font-size: 1.2rem;
+}
+
+footer {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 50px 20px 20px;
+  background-color: #ccc;
+}
+
+footer ul{
+  list-style: none;
+}
+
+footer ul li{
+  line-height: 20px;
+}
+
+
+@media (min-width: 769px) and (max-width: 800px) {
+  #detail {
+    padding: 3rem;
+    gap: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  #profile > article h1 {
+    text-align: center;
+  }
+
+  #profile > article div {
+    height: auto;
+  }
+
+  #profile img {
+    width: 100%;
+    height: auto;
+  }
+
+  #detail {
+    grid-template-columns : repeat(1, 1fr);
+    gap:6rem;
+  }
+}
